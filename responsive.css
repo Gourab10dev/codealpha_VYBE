@@ -1,0 +1,2226 @@
+/* =========================================================
+   VYBE — COMPLETE RESPONSIVE SYSTEM
+   Works with:
+   Desktop • Laptop • Tablet • Mobile • Small Mobile
+   ========================================================= */
+
+
+/* =========================================================
+   1. LARGE DESKTOP — 1400px+
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+    .main-content {
+        padding: 45px 50px 150px;
+    }
+
+    .album-container {
+        gap: 24px;
+    }
+
+    .album-card {
+        flex-basis: 190px;
+        width: 190px;
+        height: 250px;
+    }
+
+    .album-card img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .artists-container {
+        gap: 30px;
+    }
+
+    .artist-card {
+        flex-basis: 165px;
+        min-width: 165px;
+    }
+
+    .artist-card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .player {
+        max-width: 1200px;
+    }
+}
+
+
+/* =========================================================
+   2. LAPTOP — 1200px to 1399px
+   ========================================================= */
+
+@media (max-width: 1399px) {
+
+    .main-content {
+        padding: 35px 35px 145px;
+    }
+
+    .album-container {
+        gap: 18px;
+    }
+
+    .artists-container {
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   3. SMALL LAPTOP / TABLET — 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    /* -------------------------
+       SIDEBAR
+    ------------------------- */
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .content-area {
+        margin-left: 200px;
+    }
+
+
+    /* -------------------------
+       CONTENT
+    ------------------------- */
+
+    .main-content {
+        padding: 32px 28px 145px;
+    }
+
+
+    .main-content h1 {
+        font-size: 30px;
+    }
+
+
+    /* -------------------------
+       PLAYER
+    ------------------------- */
+
+    .player {
+        left: calc(50% + 100px);
+        width: calc(100% - 250px);
+
+        padding: 10px 18px;
+
+        gap: 12px;
+    }
+
+    .song-info {
+        min-width: 180px;
+        max-width: 220px;
+    }
+
+    .player-controls {
+        width: 45%;
+    }
+
+    .volume {
+        width: 130px;
+    }
+
+    #volume-bar {
+        width: 75px;
+    }
+
+}
+
+
+/* =========================================================
+   4. TABLET — 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* -------------------------
+       SIDEBAR
+    ------------------------- */
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .content-area {
+        margin-left: 190px;
+    }
+
+
+    /* -------------------------
+       CONTENT
+    ------------------------- */
+
+    .main-content {
+        padding: 30px 24px 145px;
+    }
+
+    .main-content h1 {
+        font-size: 28px;
+    }
+
+
+    .search-bar {
+        max-width: 520px;
+        margin-bottom: 32px;
+    }
+
+
+    /* -------------------------
+       ALBUMS
+    ------------------------- */
+
+    .music-section {
+        margin-top: 35px;
+    }
+
+    .album-container {
+        gap: 16px;
+    }
+
+    .album-card {
+        flex-basis: 165px;
+        width: 165px;
+        height: 225px;
+    }
+
+    .album-card img {
+        width: 145px;
+        height: 145px;
+    }
+
+
+    /* -------------------------
+       ARTISTS
+    ------------------------- */
+
+    .artists-container {
+        gap: 18px;
+    }
+
+    .artist-card {
+        flex-basis: 135px;
+        min-width: 135px;
+    }
+
+    .artist-card img {
+        width: 125px;
+        height: 125px;
+    }
+
+
+    /* -------------------------
+       PLAYER
+    ------------------------- */
+
+    .player {
+        left: calc(50% + 95px);
+        width: calc(100% - 230px);
+
+        min-height: 72px;
+
+        padding: 8px 14px;
+
+        gap: 10px;
+
+        border-radius: 17px;
+    }
+
+    .song-info {
+        min-width: 150px;
+        max-width: 190px;
+    }
+
+    .song-image {
+        width: 48px;
+        height: 48px;
+    }
+
+    .song-info h4,
+    .song-title {
+        font-size: 12px;
+    }
+
+    .song-info p,
+    .song-artist {
+        font-size: 10px;
+    }
+
+    .player-controls {
+        width: 46%;
+    }
+
+    .control-buttons {
+        gap: 12px;
+    }
+
+    .secondary-control {
+        width: 28px;
+        height: 28px;
+        font-size: 15px;
+    }
+
+    .player-controls .play-button {
+        width: 37px;
+        height: 37px;
+    }
+
+    .volume {
+        width: 100px;
+        gap: 7px;
+    }
+
+    #volume-bar {
+        width: 55px;
+    }
+
+}
+
+
+/* =========================================================
+   5. TABLET / MOBILE TRANSITION — 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================================
+       SIDEBAR
+       Spotify-style compact navigation
+       ===================================================== */
+
+    .sidebar {
+        width: 72px;
+
+        padding: 20px 8px;
+    }
+
+
+    .sidebar-logo {
+        justify-content: center;
+
+        padding: 4px 0 28px;
+    }
+
+
+    .sidebar-logo span {
+        display: none;
+    }
+
+
+    .logo-circle {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .main-nav {
+        gap: 6px;
+    }
+
+
+    .nav-item {
+        justify-content: center;
+
+        padding: 13px 8px;
+
+        gap: 0;
+    }
+
+
+    .nav-item span {
+        display: none;
+    }
+
+
+    .nav-item i {
+        font-size: 18px;
+    }
+
+
+    .playlist-section,
+    .user-playlists {
+        display: none;
+    }
+
+
+    .sidebar-bottom .nav-item {
+        justify-content: center;
+    }
+
+
+    .sidebar-bottom .nav-item span {
+        display: none;
+    }
+
+
+    /* =====================================================
+       MAIN CONTENT
+       ===================================================== */
+
+    .content-area {
+        margin-left: 72px;
+
+        width: calc(100% - 72px);
+    }
+
+
+    .main-content {
+        padding: 25px 20px 150px;
+    }
+
+
+    .main-content h1 {
+        font-size: 26px;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* =====================================================
+       SEARCH
+       ===================================================== */
+
+    .search-bar {
+        margin-top: 15px;
+
+        margin-bottom: 28px;
+
+        max-width: none;
+
+        padding: 8px 15px;
+    }
+
+
+    .search-icon {
+        font-size: 18px;
+
+        margin-right: 9px;
+    }
+
+
+    .search-bar input {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       MUSIC
+       ===================================================== */
+
+    .music-section {
+        margin-top: 30px;
+    }
+
+
+    .music-section h2,
+    .artists-section h2 {
+        font-size: 20px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .album-container {
+        gap: 14px;
+
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+
+    .album-card {
+        flex: 0 0 155px;
+
+        width: 155px;
+
+        height: 215px;
+    }
+
+
+    .album-card img {
+        width: 135px;
+        height: 135px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .album-card h3 {
+        font-size: 14px;
+    }
+
+
+    .album-card p {
+        font-size: 11px;
+    }
+
+
+    /* Hide hover play button behavior on touch devices */
+
+    .play-btn {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: scale(.85);
+
+        width: 42px;
+        height: 42px;
+    }
+
+
+    /* =====================================================
+       SCROLL BUTTONS
+       ===================================================== */
+
+    .scroll-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .scroll-left {
+        left: -8px;
+    }
+
+
+    .scroll-right {
+        right: -8px;
+    }
+
+
+    /* =====================================================
+       ARTISTS
+       ===================================================== */
+
+    .artists-section {
+        margin-top: 20px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .artists-container {
+        gap: 14px;
+    }
+
+
+    .artist-card {
+        flex: 0 0 125px;
+
+        min-width: 125px;
+
+        padding: 7px;
+    }
+
+
+    .artist-card img {
+        width: 110px;
+        height: 110px;
+    }
+
+
+    .artist-card h3 {
+        font-size: 14px;
+    }
+
+
+    .artist-card p {
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       PLAYER — MOBILE LAYOUT
+       ===================================================== */
+
+    .player {
+        left: 50%;
+
+        width: calc(100% - 20px);
+
+        max-width: none;
+
+        bottom: 8px;
+
+        min-height: auto;
+
+        padding: 10px;
+
+        border-radius: 16px;
+
+        display: grid;
+
+        grid-template-columns: minmax(0, 1fr) auto;
+
+        gap: 8px 10px;
+    }
+
+
+    /* SONG INFORMATION */
+
+    .song-info,
+    .player .song-info {
+        min-width: 0;
+
+        max-width: none;
+
+        width: 100%;
+
+        gap: 8px;
+    }
+
+
+    .song-image,
+    .player .song-image {
+        width: 45px;
+
+        height: 45px;
+    }
+
+
+    .song-details,
+    .player .song-details {
+        min-width: 0;
+
+        max-width: none;
+
+        overflow: hidden;
+    }
+
+
+    .song-info h4,
+    .song-title {
+        font-size: 11px;
+    }
+
+
+    .song-info p,
+    .song-artist {
+        font-size: 9px;
+    }
+
+
+    /* LIKE BUTTON */
+
+    .like-button {
+        width: 30px;
+
+        height: 30px;
+
+        font-size: 16px;
+    }
+
+
+    /* CONTROLS */
+
+    .player-controls,
+    .player .player-controls {
+        grid-column: 1 / -1;
+
+        grid-row: 2;
+
+        width: 100%;
+
+        flex: none;
+
+        gap: 7px;
+    }
+
+
+    .control-buttons,
+    .player .control-buttons {
+        gap: 12px;
+    }
+
+
+    .secondary-control {
+        width: 27px;
+
+        height: 27px;
+
+        font-size: 15px;
+    }
+
+
+    .player-controls .play-button {
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 15px;
+    }
+
+
+    /* PROGRESS */
+
+    .progress-container {
+        width: 100%;
+
+        gap: 6px;
+    }
+
+
+    .progress-container span {
+        font-size: 10px;
+
+        min-width: 28px;
+    }
+
+
+    #progress-bar {
+        height: 4px;
+    }
+
+
+    /* VOLUME */
+
+    .volume {
+        width: auto;
+
+        gap: 6px;
+    }
+
+
+    #volume-bar {
+        width: 60px;
+    }
+
+}
+
+
+/* =========================================================
+   6. MOBILE — 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -------------------------
+       CONTENT
+    ------------------------- */
+
+    .main-content {
+        padding: 22px 16px 155px;
+    }
+
+
+    .main-content h1 {
+        font-size: 24px;
+    }
+
+
+    /* -------------------------
+       SEARCH
+    ------------------------- */
+
+    .search-bar {
+        height: 45px;
+
+        margin-bottom: 24px;
+    }
+
+
+    .search-bar input {
+        font-size: 13px;
+    }
+
+
+    /* -------------------------
+       ALBUMS
+    ------------------------- */
+
+    .album-card {
+        flex-basis: 145px;
+
+        width: 145px;
+
+        height: 202px;
+    }
+
+
+    .album-card img {
+        width: 125px;
+
+        height: 125px;
+    }
+
+
+    .album-card h3 {
+        font-size: 13px;
+    }
+
+
+    .album-card p {
+        font-size: 10px;
+    }
+
+
+    /* -------------------------
+       ARTISTS
+    ------------------------- */
+
+    .artist-card {
+        flex-basis: 115px;
+
+        min-width: 115px;
+    }
+
+
+    .artist-card img {
+        width: 100px;
+
+        height: 100px;
+    }
+
+
+    /* -------------------------
+       PLAYER
+    ------------------------- */
+
+    .player {
+        width: calc(100% - 14px);
+
+        bottom: 6px;
+
+        padding: 8px;
+
+        border-radius: 15px;
+    }
+
+
+    .song-image,
+    .player .song-image {
+        width: 42px;
+
+        height: 42px;
+    }
+
+
+    .song-info h4,
+    .song-title {
+        font-size: 10px;
+    }
+
+
+    .song-info p,
+    .song-artist {
+        font-size: 8px;
+    }
+
+
+    .like-button {
+        width: 28px;
+
+        height: 28px;
+
+        font-size: 15px;
+    }
+
+
+    .control-buttons {
+        gap: 8px;
+    }
+
+
+    .secondary-control {
+        width: 25px;
+
+        height: 25px;
+
+        font-size: 14px;
+    }
+
+
+    .player-controls .play-button {
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 14px;
+    }
+
+
+    .volume {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   7. SMALL MOBILE — 500px
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    /* =====================================================
+       SIDEBAR
+       ===================================================== */
+
+    .sidebar {
+        width: 60px;
+
+        padding: 18px 6px;
+    }
+
+
+    .content-area {
+        margin-left: 60px;
+
+        width: calc(100% - 60px);
+    }
+
+
+    .sidebar-logo {
+        padding-bottom: 24px;
+    }
+
+
+    .logo-circle {
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .nav-item {
+        padding: 12px 6px;
+    }
+
+
+    .nav-item i {
+        font-size: 17px;
+    }
+
+
+    /* =====================================================
+       CONTENT
+       ===================================================== */
+
+    .main-content {
+        padding: 20px 12px 155px;
+    }
+
+
+    .main-content h1 {
+        font-size: 22px;
+    }
+
+
+    .search-bar {
+        height: 43px;
+
+        padding: 7px 13px;
+    }
+
+
+    .search-icon {
+        font-size: 17px;
+    }
+
+
+    .search-bar input {
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       MUSIC
+       ===================================================== */
+
+    .music-section h2,
+    .artists-section h2 {
+        font-size: 18px;
+    }
+
+
+    .album-card {
+        flex-basis: 135px;
+
+        width: 135px;
+
+        height: 190px;
+    }
+
+
+    .album-card img {
+        width: 115px;
+
+        height: 115px;
+
+        margin-top: 8px;
+    }
+
+
+    .album-card h3 {
+        font-size: 12px;
+
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+
+    .album-card p {
+        font-size: 9px;
+
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+
+    .play-btn {
+        width: 38px;
+
+        height: 38px;
+
+        right: 7px;
+
+        bottom: 22px;
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       ARTISTS
+       ===================================================== */
+
+    .artist-card {
+        flex-basis: 105px;
+
+        min-width: 105px;
+    }
+
+
+    .artist-card img {
+        width: 90px;
+
+        height: 90px;
+    }
+
+
+    .artist-card h3 {
+        font-size: 12px;
+    }
+
+
+    .artist-card p {
+        font-size: 9px;
+    }
+
+
+    /* =====================================================
+       PLAYER
+       ===================================================== */
+
+    .player {
+        width: calc(100% - 10px);
+
+        padding: 7px;
+
+        gap: 5px;
+    }
+
+
+    .song-info,
+    .player .song-info {
+        gap: 6px;
+    }
+
+
+    .song-image,
+    .player .song-image {
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    .song-details,
+    .player .song-details {
+        max-width: 100px;
+    }
+
+
+    .song-info h4,
+    .song-title {
+        font-size: 9px;
+    }
+
+
+    .song-info p,
+    .song-artist {
+        font-size: 7px;
+    }
+
+
+    .like-button {
+        width: 26px;
+
+        height: 26px;
+
+        font-size: 14px;
+    }
+
+
+    .control-buttons {
+        gap: 5px;
+    }
+
+
+    .secondary-control {
+        width: 23px;
+
+        height: 23px;
+
+        font-size: 12px;
+    }
+
+
+    .player-controls .play-button {
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 13px;
+    }
+
+
+    .progress-container {
+        gap: 4px;
+    }
+
+
+    .progress-container span {
+        font-size: 9px;
+
+        min-width: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   8. VERY SMALL MOBILE — 400px
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    /* -------------------------
+       SIDEBAR
+    ------------------------- */
+
+    .sidebar {
+        width: 54px;
+
+        padding-left: 5px;
+
+        padding-right: 5px;
+    }
+
+
+    .content-area {
+        margin-left: 54px;
+
+        width: calc(100% - 54px);
+    }
+
+
+    .logo-circle {
+        width: 31px;
+
+        height: 31px;
+    }
+
+
+    .nav-item {
+        padding: 11px 5px;
+    }
+
+
+    /* -------------------------
+       CONTENT
+    ------------------------- */
+
+    .main-content {
+        padding-left: 9px;
+
+        padding-right: 9px;
+
+        padding-bottom: 155px;
+    }
+
+
+    .main-content h1 {
+        font-size: 20px;
+    }
+
+
+    /* -------------------------
+       ALBUMS
+    ------------------------- */
+
+    .album-card {
+        flex-basis: 125px;
+
+        width: 125px;
+
+        height: 177px;
+    }
+
+
+    .album-card img {
+        width: 105px;
+
+        height: 105px;
+    }
+
+
+    .album-card h3 {
+        font-size: 11px;
+    }
+
+
+    .album-card p {
+        font-size: 8px;
+    }
+
+
+    /* -------------------------
+       ARTISTS
+    ------------------------- */
+
+    .artist-card {
+        flex-basis: 95px;
+
+        min-width: 95px;
+    }
+
+
+    .artist-card img {
+        width: 80px;
+
+        height: 80px;
+    }
+
+
+    .artist-card h3 {
+        font-size: 11px;
+    }
+
+
+    /* -------------------------
+       PLAYER
+    ------------------------- */
+
+    .player {
+        width: calc(100% - 8px);
+
+        padding: 6px;
+    }
+
+
+    .song-image,
+    .player .song-image {
+        width: 37px;
+
+        height: 37px;
+    }
+
+
+    .song-details,
+    .player .song-details {
+        max-width: 75px;
+    }
+
+
+    .song-info h4,
+    .song-title {
+        font-size: 8px;
+    }
+
+
+    .song-info p,
+    .song-artist {
+        font-size: 7px;
+    }
+
+
+    .like-button {
+        width: 24px;
+
+        height: 24px;
+
+        font-size: 13px;
+    }
+
+
+    .control-buttons {
+        gap: 2px;
+    }
+
+
+    .secondary-control {
+        width: 21px;
+
+        height: 21px;
+
+        font-size: 11px;
+    }
+
+
+    .player-controls .play-button {
+        width: 31px;
+
+        height: 31px;
+
+        font-size: 12px;
+    }
+
+
+    .progress-container span {
+        font-size: 8px;
+
+        min-width: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   9. EXTREMELY SMALL DEVICES — 350px
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+    .sidebar {
+        width: 50px;
+    }
+
+
+    .content-area {
+        margin-left: 50px;
+
+        width: calc(100% - 50px);
+    }
+
+
+    .main-content {
+        padding-left: 7px;
+
+        padding-right: 7px;
+    }
+
+
+    .album-card {
+        flex-basis: 115px;
+
+        width: 115px;
+
+        height: 165px;
+    }
+
+
+    .album-card img {
+        width: 95px;
+
+        height: 95px;
+    }
+
+
+    .artist-card {
+        flex-basis: 88px;
+
+        min-width: 88px;
+    }
+
+
+    .artist-card img {
+        width: 74px;
+
+        height: 74px;
+    }
+
+
+    .player {
+        width: calc(100% - 6px);
+
+        padding: 5px;
+
+        border-radius: 12px;
+    }
+
+
+    .song-image,
+    .player .song-image {
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .song-details,
+    .player .song-details {
+        max-width: 62px;
+    }
+
+
+    .like-button {
+        width: 22px;
+
+        height: 22px;
+
+        font-size: 12px;
+    }
+
+
+    .secondary-control {
+        width: 19px;
+
+        height: 19px;
+
+        font-size: 10px;
+    }
+
+
+    .player-controls .play-button {
+        width: 29px;
+
+        height: 29px;
+
+        font-size: 11px;
+    }
+
+
+    .control-buttons {
+        gap: 1px;
+    }
+
+}
+
+
+/* =========================================================
+   10. LIKED SONGS PAGE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .liked-page {
+        padding-bottom: 40px;
+    }
+
+
+    .liked-page-header {
+        gap: 16px;
+
+        padding: 20px;
+
+        min-height: 120px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .liked-page-icon {
+        width: 95px;
+
+        height: 95px;
+
+        font-size: 35px;
+    }
+
+
+    .liked-page-header h1 {
+        font-size: 28px;
+    }
+
+
+    .liked-page-header span {
+        font-size: 12px;
+    }
+
+
+    .liked-song {
+        grid-template-columns:
+            50px
+            minmax(0, 1fr)
+            40px
+            40px;
+
+        gap: 8px;
+
+        padding: 8px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .liked-page-header {
+        gap: 12px;
+
+        padding: 15px;
+
+        min-height: 95px;
+
+        margin-bottom: 22px;
+
+        border-radius: 17px;
+    }
+
+
+    .liked-page-icon {
+        width: 70px;
+
+        height: 70px;
+
+        font-size: 25px;
+    }
+
+
+    .liked-page-header h1 {
+        font-size: 21px;
+    }
+
+
+    .liked-page-header p {
+        font-size: 10px;
+    }
+
+
+    .liked-page-header span {
+        font-size: 10px;
+    }
+
+
+    .liked-song {
+        grid-template-columns:
+            42px
+            minmax(0, 1fr)
+            32px
+            32px;
+
+        gap: 5px;
+
+        padding: 7px 2px;
+    }
+
+
+    .liked-song-image {
+        width: 38px;
+
+        height: 38px;
+    }
+
+
+    .liked-song-info h3 {
+        font-size: 12px;
+    }
+
+
+    .liked-song-info p {
+        font-size: 9px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .liked-page-header {
+        padding: 12px;
+
+        gap: 9px;
+    }
+
+
+    .liked-page-icon {
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 21px;
+    }
+
+
+    .liked-page-header h1 {
+        font-size: 18px;
+    }
+
+
+    .liked-song {
+        grid-template-columns:
+            38px
+            minmax(0, 1fr)
+            28px
+            28px;
+
+        gap: 3px;
+    }
+
+
+    .liked-song-image {
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .liked-song-info h3 {
+        font-size: 11px;
+    }
+
+
+    .liked-song-info p {
+        font-size: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   11. CREATE PLAYLIST PAGE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .create-playlist-page {
+        padding: 30px;
+
+        padding-bottom: 145px;
+    }
+
+
+    .playlist-hero {
+        gap: 22px;
+
+        padding: 22px;
+    }
+
+
+    .playlist-cover {
+        width: 155px;
+
+        height: 155px;
+    }
+
+
+    .playlist-hero-details h1 {
+        font-size: 40px;
+    }
+
+
+    .playlist-actions {
+        margin-top: 80px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .create-playlist-page {
+        padding: 25px 20px 155px;
+    }
+
+
+    .playlist-hero {
+        min-height: auto;
+
+        display: grid;
+
+        grid-template-columns: 110px minmax(0, 1fr);
+
+        align-items: center;
+
+        gap: 18px;
+
+        padding: 22px;
+    }
+
+
+    .playlist-cover {
+        width: 110px;
+
+        height: 110px;
+
+        font-size: 38px;
+    }
+
+
+    .playlist-hero-details {
+        min-width: 0;
+    }
+
+
+    .playlist-hero-details h1 {
+        font-size: 27px;
+
+        word-break: break-word;
+    }
+
+
+    .playlist-hero-details p {
+        font-size: 12px;
+    }
+
+
+    .playlist-actions {
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        margin-top: 10px;
+
+        display: flex;
+
+        flex-wrap: wrap;
+    }
+
+
+    .playlist-add-button,
+    .playlist-edit-button,
+    .delete-playlist-button {
+        flex: 1;
+
+        min-width: 0;
+
+        height: 40px;
+
+        font-size: 12px;
+
+        padding: 0 12px;
+    }
+
+
+    .playlist-song-list {
+        width: 100%;
+    }
+
+
+    .playlist-added-song {
+        gap: 10px;
+
+        padding: 8px;
+    }
+
+
+    .playlist-song-image {
+        width: 46px;
+
+        height: 46px;
+    }
+
+
+    .playlist-song-details h3 {
+        font-size: 14px;
+    }
+
+
+    .playlist-song-details p {
+        font-size: 11px;
+    }
+
+
+    .playlist-row-play,
+    .playlist-row-remove {
+        width: 32px;
+
+        height: 32px;
+    }
+
+
+    .playlist-search-box {
+        height: 46px;
+    }
+
+
+    .playlist-search-box input {
+        font-size: 13px;
+    }
+
+
+    .playlist-search-song {
+        min-height: 60px;
+
+        padding: 7px;
+    }
+
+
+    .playlist-search-image {
+        width: 43px;
+
+        height: 43px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .create-playlist-page {
+        padding: 18px 12px 155px;
+    }
+
+
+    .playlist-hero {
+        grid-template-columns: 78px minmax(0, 1fr);
+
+        gap: 12px;
+
+        padding: 15px;
+
+        border-radius: 17px;
+    }
+
+
+    .playlist-cover {
+        width: 78px;
+
+        height: 78px;
+
+        font-size: 28px;
+
+        border-radius: 12px;
+    }
+
+
+    .playlist-small-label {
+        font-size: 10px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .playlist-hero-details h1 {
+        font-size: 21px;
+    }
+
+
+    .playlist-hero-details p {
+        font-size: 10px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .playlist-song-count {
+        font-size: 11px;
+    }
+
+
+    .playlist-actions {
+        gap: 6px;
+
+        margin-top: 5px;
+    }
+
+
+    .playlist-add-button,
+    .playlist-edit-button,
+    .delete-playlist-button {
+        height: 36px;
+
+        font-size: 10px;
+
+        padding: 0 8px;
+    }
+
+
+    .playlist-added-song {
+        min-height: 55px;
+
+        gap: 7px;
+
+        padding: 6px 3px;
+    }
+
+
+    .playlist-song-image {
+        width: 38px;
+
+        height: 38px;
+    }
+
+
+    .playlist-song-details h3 {
+        font-size: 12px;
+    }
+
+
+    .playlist-song-details p {
+        font-size: 9px;
+    }
+
+
+    .playlist-row-play,
+    .playlist-row-remove {
+        width: 29px;
+
+        height: 29px;
+
+        font-size: 12px;
+    }
+
+
+    .playlist-search-section {
+        margin-top: 20px;
+
+        padding-bottom: 25px;
+    }
+
+
+    .playlist-search-box {
+        height: 43px;
+
+        padding: 7px 13px;
+    }
+
+
+    .playlist-search-box input {
+        font-size: 12px;
+    }
+
+
+    .playlist-search-song {
+        min-height: 55px;
+
+        gap: 8px;
+
+        padding: 6px 3px;
+    }
+
+
+    .playlist-search-image {
+        width: 38px;
+
+        height: 38px;
+    }
+
+
+    .playlist-search-details h3 {
+        font-size: 12px;
+    }
+
+
+    .playlist-search-details p {
+        font-size: 9px;
+    }
+
+
+    .playlist-search-add {
+        width: 30px;
+
+        height: 30px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .create-playlist-page {
+        padding-left: 8px;
+
+        padding-right: 8px;
+    }
+
+
+    .playlist-hero {
+        grid-template-columns: 65px minmax(0, 1fr);
+
+        gap: 9px;
+
+        padding: 12px;
+    }
+
+
+    .playlist-cover {
+        width: 65px;
+
+        height: 65px;
+
+        font-size: 23px;
+    }
+
+
+    .playlist-hero-details h1 {
+        font-size: 18px;
+    }
+
+
+    .playlist-hero-details p {
+        font-size: 9px;
+    }
+
+
+    .playlist-add-button,
+    .playlist-edit-button,
+    .delete-playlist-button {
+        font-size: 8px;
+
+        padding: 0 5px;
+    }
+
+
+    .playlist-song-image,
+    .playlist-search-image {
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .playlist-song-details h3,
+    .playlist-search-details h3 {
+        font-size: 10px;
+    }
+
+
+    .playlist-song-details p,
+    .playlist-search-details p {
+        font-size: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   12. LOGIN PAGE
+   ========================================================= */
+
+/*
+   login.html already has its own mobile media query.
+   These rules only improve very small screens.
+*/
+
+@media (max-width: 400px) {
+
+    .login-box {
+        width: calc(100% - 24px);
+
+        padding: 25px 16px;
+    }
+
+
+    .login-box h1 {
+        font-size: 25px;
+    }
+
+
+    .login-subtitle {
+        font-size: 12px;
+    }
+
+
+    .login-input {
+        font-size: 13px;
+    }
+
+
+    .login-submit {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   13. USER LOGIN / PROFILE BUTTON
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .user-area {
+        top: 14px;
+
+        right: 15px;
+    }
+
+
+    .login-button {
+        min-width: 40px;
+
+        height: 40px;
+
+        padding: 0 13px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .user-area {
+        top: 10px;
+
+        right: 10px;
+    }
+
+
+    .login-button {
+        width: 38px;
+
+        min-width: 38px;
+
+        height: 38px;
+
+        padding: 0;
+
+        justify-content: center;
+    }
+
+
+    .login-button span {
+        display: none;
+    }
+
+
+    .login-button i {
+        font-size: 14px;
+    }
+
+
+    .user-initial {
+        width: 38px;
+
+        height: 38px;
+    }
+
+
+    .profile-menu {
+        width: 200px;
+
+        right: 0;
+    }
+
+}
+
+
+/* =========================================================
+   14. TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    /*
+       Remove hover-only movement on touch screens.
+    */
+
+    .album-card:hover {
+        transform: none;
+
+        background: transparent;
+
+        box-shadow: none;
+
+        backdrop-filter: none;
+
+        -webkit-backdrop-filter: none;
+    }
+
+
+    .artist-card:hover {
+        transform: none;
+
+        background: transparent;
+    }
+
+
+    .play-btn {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: scale(.85);
+    }
+
+
+    .nav-item:hover {
+        transform: none;
+    }
+
+
+    .playlist-item:hover {
+        background: transparent;
+    }
+
+
+    .playlist-added-song:hover,
+    .playlist-search-song:hover {
+        background: transparent;
+    }
+
+}
+
+
+/* =========================================================
+   15. LANDSCAPE MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+    .main-content {
+        padding-bottom: 145px;
+    }
+
+
+    .player {
+        bottom: 5px;
+    }
+
+
+    .album-card {
+        flex-basis: 140px;
+
+        width: 140px;
+    }
+
+
+    .album-card img {
+        width: 120px;
+
+        height: 120px;
+    }
+
+
+    .artist-card img {
+        width: 90px;
+
+        height: 90px;
+    }
+
+}
+
+
+/* =========================================================
+   16. ACCESSIBILITY — REDUCE MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}

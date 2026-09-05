@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Liked Songs - VYBE</title>
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- VYBE CSS -->
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- ==================================================
+         SIDEBAR
+    =================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-circle">
+                ◯
+            </div>
+
+            <span>VYBE</span>
+
+        </div>
+
+
+        <!-- MAIN NAVIGATION -->
+
+        <nav class="main-nav">
+
+
+            <!-- HOME -->
+
+            <a
+                href="index.html"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Home</span>
+
+            </a>
+
+
+            <!-- SEARCH -->
+
+            <a
+                href="index.html#search-input"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <span>Search</span>
+
+            </a>
+
+
+            <!-- LIBRARY -->
+
+            <a
+                href="#"
+                class="nav-item active"
+            >
+
+                <i class="fa-solid fa-book"></i>
+
+                <span>Your Library</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- ==================================================
+             LIBRARY
+        =================================================== -->
+
+        <div class="playlist-section">
+
+
+            <div class="playlist-heading">
+                YOUR LIBRARY
+            </div>
+
+
+            <!-- CREATE PLAYLIST -->
+
+            <a
+                href="create-playlist.html"
+                class="playlist-item"
+            >
+
+                <div class="playlist-icon create">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+                <span>Create Playlist</span>
+
+            </a>
+
+
+            <!-- LIKED SONGS -->
+
+            <a
+                href="liked.html"
+                class="playlist-item"
+            >
+
+                <div class="playlist-icon liked">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                </div>
+
+                <span>Liked Songs</span>
+
+            </a>
+
+
+        </div>
+
+
+        <!-- USER PLAYLISTS -->
+
+        <div
+            class="user-playlists"
+            id="sidebar-playlists"
+        >
+
+            <div class="playlist-heading">
+                YOUR PLAYLIST
+            </div>
+
+            <!-- JavaScript will load playlists here -->
+
+        </div>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="#"
+                class="nav-item settings-item"
+            >
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==================================================
+         CONTENT
+    =================================================== -->
+
+    <div class="content-area">
+
+
+        <main class="main-content liked-page">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="liked-page-header">
+
+
+                <div class="liked-page-icon">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                </div>
+
+
+                <div>
+
+                    <p>YOUR COLLECTION</p>
+
+                    <h1>Liked Songs</h1>
+
+                    <span id="liked-count">
+                        0 songs
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 LIKED SONG LIST
+            =================================================== -->
+
+            <div
+                id="liked-songs-container"
+                class="liked-songs-container"
+            >
+            </div>
+
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                id="empty-liked"
+                class="empty-liked"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+                <h2>No liked songs yet</h2>
+
+                <p>
+                    Songs you like will appear here.
+                </p>
+
+                <a
+                    href="index.html"
+                    class="back-home-button"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Browse Songs
+                </a>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+</div>
+
+<!-- =========================
+    BOTTOM MUSIC PLAYER
+=============================== -->
+
+<div class="player">
+
+    <!-- ==================================================
+         SONG INFORMATION
+    =================================================== -->
+
+    <div class="song-info">
+
+
+        <!-- CURRENT SONG IMAGE -->
+
+        <div id="song-image" class="song-image"></div>
+
+        <!-- SONG TITLE + ARTIST -->
+
+        <div class="song-details">
+            <h4 id="song-title"> Choose a song </h4>
+            <p id="song-artist"> VYBE Originals </p>
+        </div>
+                    
+        <!-- Add to Liked Songs -->
+        <button id="like-button" class="like-button" title="Add to Liked Songs">
+            <i class="fa-regular fa-plus"></i>
+        </button>
+
+    </div>
+
+    <!-- ==================================================
+         PLAYER CONTROLS
+    =================================================== -->
+
+    <div class="player-controls">
+
+        <!-- =========================
+             CONTROL BUTTONS
+        ========================== -->
+
+        <div class="control-buttons">
+
+            <!-- SHUFFLE -->
+
+            <button
+                id="shuffle-button"
+                class="secondary-control"
+                type="button"
+                aria-label="Shuffle"
+                title="Shuffle"
+            >
+
+                <i class="fa-solid fa-shuffle"></i>
+
+            </button>
+
+            <!-- PREVIOUS -->
+
+            <button
+                id="prev-button"
+                class="secondary-control"
+                type="button"
+                aria-label="Previous song"
+                title="Previous song"
+            >
+
+                <i class="fa-solid fa-backward-step"></i>
+
+            </button>
+
+            <!-- PLAY / PAUSE -->
+
+            <button
+                id="play-button"
+                class="play-button"
+                type="button"
+                aria-label="Play"
+                title="Play"
+            >
+
+                <i class="fa-solid fa-play"></i>
+
+            </button>
+
+            <!-- NEXT -->
+
+            <button
+                id="next-button"
+                class="secondary-control"
+                type="button"
+                aria-label="Next song"
+                title="Next song"
+            >
+
+                <i class="fa-solid fa-forward-step"></i>
+
+            </button>
+
+            <!-- REPEAT -->
+
+            <button
+                id="repeat-button"
+                class="secondary-control"
+                type="button"
+                aria-label="Repeat"
+                title="Repeat"
+            >
+
+                <i class="fa-solid fa-repeat"></i>
+
+            </button>
+
+
+        </div>
+
+        <!-- ==================================================
+             PROGRESS BAR
+        =================================================== -->
+
+        <div class="progress-container">
+
+            <!-- CURRENT TIME -->
+
+            <span id="current-time">
+                0:00
+            </span>
+
+            <!-- PROGRESS -->
+
+            <input
+                type="range"
+                id="progress-bar"
+                value="0"
+                min="0"
+                max="100"
+                step="0"
+                aria-label="Song progress"
+            >
+
+            <!-- TOTAL DURATION -->
+
+            <span id="duration">
+                0:00
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- ==================================================
+         VOLUME CONTROL
+     =================================================== -->
+
+    <div class="volume">
+
+        <!-- VOLUME ICON -->
+
+        <button
+            id="volume-icon"
+            type="button"
+            aria-label="Mute or unmute"
+            title="Mute / Unmute"
+        >
+
+            <i class="fa-solid fa-volume-high"></i>
+
+        </button>
+
+        <!-- VOLUME SLIDER -->
+
+        <input
+            type="range"
+            id="volume-bar"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+            aria-label="Volume"
+        >
+
+    </div>
+
+</div>
+
+<!-- AUDIO -->
+<audio
+    id="audio-player"
+    preload="metadata"
+></audio>
+
+<!-- ==================================================
+     JAVASCRIPT
+=================================================== -->
+
+<script src="Liked.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - VYBE</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="Style.css">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                radial-gradient(circle at top left, #7b00a8 0%, transparent 35%),
+                radial-gradient(circle at bottom right, #004cff 0%, transparent 35%),
+                #070b16;
+
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .login-box {
+            width: 380px;
+            padding: 40px;
+
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 25px;
+
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+            text-align: center;
+        }
+
+        .login-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 25px;
+        }
+
+        .login-logo-circle {
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: linear-gradient(135deg, #9f21f3, #00ee3b);
+
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .login-logo span {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .login-box h1 {
+            margin-bottom: 8px;
+            font-size: 28px;
+        }
+
+        .login-subtitle {
+            color: #9da7b8;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .login-input {
+            width: 100%;
+            height: 48px;
+
+            box-sizing: border-box;
+
+            margin-bottom: 15px;
+            padding: 0 16px;
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+
+            outline: none;
+
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+
+            font-size: 14px;
+        }
+
+        .login-input::placeholder {
+            color: #8f9bad;
+        }
+
+        .login-input:focus {
+            border-color: #9f21f3;
+            box-shadow: 0 0 15px rgba(159, 33, 243, 0.25);
+        }
+
+        .login-submit {
+            width: 100%;
+            height: 48px;
+
+            margin-top: 10px;
+
+            border: none;
+            border-radius: 24px;
+
+            background: linear-gradient(90deg, #9f21f3, #00ee3b);
+
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+        }
+
+        .login-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(159, 33, 243, 0.35);
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 22px;
+
+            color: #9da7b8;
+            text-decoration: none;
+
+            font-size: 13px;
+        }
+
+        .back-home:hover {
+            color: white;
+        }
+
+        @media (max-width: 500px) {
+            .login-box {
+                width: calc(100% - 40px);
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <div class="login-logo">
+            <div class="login-logo-circle">◯</div>
+            <span>VYBE</span>
+        </div>
+
+        <h1>Welcome Back</h1>
+
+        <p class="login-subtitle">
+            Log in to continue listening to your VYBE.
+        </p>
+
+        <form id="login-form">
+
+            <input
+                type="text"
+                id="name"
+                class="login-input"
+                placeholder="Your name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                class="login-input"
+                placeholder="Email address"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                class="login-input"
+                placeholder="Password"
+                required
+            >
+
+            <button type="submit" class="login-submit">
+                Log in
+            </button>
+
+        </form>
+
+        <a href="index.html" class="back-home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to VYBE
+        </a>
+
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

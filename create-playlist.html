@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Playlist - VYBE</title>
+
+
+    <!-- ==================================================
+         FONT AWESOME
+    ================================================== -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- ==================================================
+         VYBE MAIN CSS
+    ================================================== -->
+
+    <link rel="stylesheet" href="Style.css">
+
+    <!-- ==================================================
+         CREATE PLAYLIST CSS
+    ================================================== -->
+
+    <link rel="stylesheet" href="playlist.css">
+
+    <link rel="stylesheet" href="responsive.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- ==================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-circle">
+                ◯
+            </div>
+
+            <span>VYBE</span>
+
+        </div>
+
+
+        <!-- ==================================================
+             MAIN NAVIGATION
+        ================================================== -->
+
+        <nav class="main-nav">
+
+
+            <!-- HOME -->
+
+            <a
+                href="index.html"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Home</span>
+
+            </a>
+
+
+            <!-- SEARCH -->
+
+            <a
+                href="index.html#search-input"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <span>Search</span>
+
+            </a>
+
+
+            <!-- YOUR LIBRARY -->
+
+            <a
+                href="liked.html"
+                class="nav-item active"
+            >
+
+                <i class="fa-solid fa-book"></i>
+
+                <span>Your Library</span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- ==================================================
+             LIBRARY
+        ================================================== -->
+
+        <div class="playlist-section">
+
+
+            <div class="playlist-heading">
+                YOUR LIBRARY
+            </div>
+
+
+            <!-- CREATE PLAYLIST -->
+
+            <a
+                href="create-playlist.html"
+                class="playlist-item active-playlist"
+            >
+
+                <div class="playlist-icon create">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+                <span>Create Playlist</span>
+
+            </a>
+
+
+            <!-- LIKED SONGS -->
+
+            <a
+                href="liked.html"
+                class="playlist-item"
+            >
+
+                <div class="playlist-icon liked">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                </div>
+
+                <span>Liked Songs</span>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- ==================================================
+             USER PLAYLISTS
+        ================================================== -->
+
+        <div
+            class="user-playlists"
+            id="sidebar-playlists"
+        >
+
+        </div>
+
+
+
+        <!-- ==================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="#"
+                class="nav-item settings-item"
+            >
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <div class="content-area">
+
+
+        <main class="main-content create-playlist-page">
+
+
+            <!-- ==================================================
+                 PLAYLIST HEADER
+            ================================================== -->
+
+            <section class="playlist-hero">
+
+
+                <!-- PLAYLIST COVER -->
+
+                <div class="playlist-cover">
+
+                    <i class="fa-solid fa-music"></i>
+
+                </div>
+
+
+                <!-- PLAYLIST DETAILS -->
+
+                <div class="playlist-hero-details">
+
+
+                    <span class="playlist-small-label">
+                        YOUR PLAYLIST
+                    </span>
+
+
+                    <h1 id="playlist-name">
+                        My Playlist
+                    </h1>
+
+
+                    <p id="playlist-description">
+                        Create your own collection of songs.
+                    </p>
+
+
+                    <span
+                        id="playlist-song-count"
+                        class="playlist-song-count"
+                    >
+                        0 songs
+                    </span>
+
+
+                </div>
+
+
+                <!-- PLAYLIST ACTIONS -->
+
+                <div class="playlist-actions">
+
+
+                    <!-- ADD SONGS -->
+
+                    <button
+                        id="add-song-button"
+                        class="playlist-add-button"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span>Add Songs</span>
+
+                    </button>
+
+
+                    <!-- EDIT PLAYLIST -->
+
+                    <button
+                        id="edit-playlist-button"
+                        class="playlist-edit-button"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        <span>Edit</span>
+
+                    </button>
+
+                    <!-- DELETE PLAYLIST -->
+
+                    <button id="delete-playlist-button" class="delete-playlist-button">
+                        <i class="fa-solid fa-trash"></i>
+                        Delete
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- ==================================================
+                 ADDED SONGS
+            ================================================== -->
+
+            <section class="playlist-content">
+
+
+                <div class="playlist-content-heading">
+
+                    <h2>
+                        Songs
+                    </h2>
+
+                </div>
+
+
+                <!-- PLAYLIST SONG LIST -->
+
+                <div
+                    id="playlist-song-list"
+                    class="playlist-song-list"
+                >
+
+                </div>
+
+
+                <!-- EMPTY PLAYLIST -->
+
+                <div
+                    id="playlist-empty"
+                    class="playlist-empty"
+                >
+
+                    <i class="fa-solid fa-music"></i>
+
+                    <h3>
+                        Your playlist is empty
+                    </h3>
+
+                    <p>
+                        Search for songs below and add them
+                        to your playlist.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 SEARCH SONGS
+            ================================================== -->
+
+            <section
+                class="playlist-search-section"
+                id="playlist-search-section"
+            >
+
+
+                <h2>
+                    Find songs to add
+                </h2>
+
+
+                <!-- SEARCH BAR -->
+
+                <div class="playlist-search-box">
+
+
+                    <i
+                        class="fa-solid fa-magnifying-glass"
+                    ></i>
+
+
+                    <input
+                        type="text"
+                        id="playlist-search-input"
+                        placeholder="Search songs, artists..."
+                        autocomplete="off"
+                    >
+
+
+                </div>
+
+
+                <!-- SEARCH RESULTS -->
+
+                <div
+                    id="playlist-search-results"
+                    class="playlist-search-results"
+                >
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==========================================================
+     BOTTOM MUSIC PLAYER
+     SAME STRUCTURE AS MAIN VYBE PLAYER
+========================================================== -->
+
+<div class="player">
+
+
+    <!-- ======================================================
+         SONG INFORMATION
+    ====================================================== -->
+
+    <div class="song-info">
+
+
+        <!-- SONG IMAGE -->
+
+        <div
+            id="song-image"
+            class="song-image"
+        ></div>
+
+
+        <!-- SONG DETAILS -->
+
+        <div class="song-details">
+
+
+            <div
+                id="song-title"
+                class="song-title"
+            >
+                No song playing
+            </div>
+
+
+            <div
+                id="song-artist"
+                class="song-artist"
+            >
+                —
+            </div>
+
+
+        </div>
+
+
+        <!-- LIKE BUTTON -->
+
+        <button
+            id="like-button"
+            class="like-button"
+            title="Add to Liked Songs"
+            type="button"
+        >
+
+            <i class="fa-regular fa-plus"></i>
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ======================================================
+         PLAYER CONTROLS
+    ====================================================== -->
+
+    <div class="player-controls">
+
+
+        <!-- CONTROL BUTTONS -->
+
+        <div class="control-buttons">
+
+
+            <!-- SHUFFLE -->
+
+            <button
+                id="shuffle-button"
+                class="secondary-control"
+                title="Shuffle"
+                type="button"
+            >
+
+                <i class="fa-solid fa-shuffle"></i>
+
+            </button>
+
+
+            <!-- PREVIOUS -->
+
+            <button
+                id="prev-button"
+                class="secondary-control"
+                title="Previous"
+                type="button"
+            >
+
+                <i class="fa-solid fa-backward-step"></i>
+
+            </button>
+
+
+            <!-- PLAY / PAUSE -->
+
+            <button
+                id="play-button"
+                class="play-button"
+                title="Play"
+                type="button"
+            >
+
+                <i class="fa-solid fa-play"></i>
+
+            </button>
+
+
+            <!-- NEXT -->
+
+            <button
+                id="next-button"
+                class="secondary-control"
+                title="Next"
+                type="button"
+            >
+
+                <i class="fa-solid fa-forward-step"></i>
+
+            </button>
+
+
+            <!-- REPEAT -->
+
+            <button
+                id="repeat-button"
+                class="secondary-control"
+                title="Repeat"
+                type="button"
+            >
+
+                <i class="fa-solid fa-repeat"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- ==================================================
+             PROGRESS BAR
+        ================================================== -->
+
+        <div class="progress-container">
+
+
+            <span id="current-time">
+                0:00
+            </span>
+
+
+            <input
+                type="range"
+                id="progress-bar"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+
+            <span id="duration">
+                0:00
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ======================================================
+         VOLUME
+    ====================================================== -->
+
+    <div class="volume">
+
+
+        <!-- VOLUME / MUTE -->
+
+        <button
+            id="volume-icon"
+            title="Mute"
+            type="button"
+        >
+
+            <i class="fa-solid fa-volume-high"></i>
+
+        </button>
+
+
+        <!-- VOLUME SLIDER -->
+
+        <input
+            type="range"
+            id="volume-bar"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+        >
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==========================================================
+     AUDIO PLAYER
+========================================================== -->
+
+<audio
+    id="audio-player"
+    preload="metadata"
+></audio>
+
+
+
+<!-- ==========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="CreatePlaylist.js"></script>
+
+
+</body>
+
+</html>

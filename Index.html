@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYBE</title>
+
+    <!-- =========================
+         FONT AWESOME
+    ========================== -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- =========================
+         CUSTOM CSS
+    ========================== -->
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+
+<body>
+
+    <!-- LOGIN BUTTON -->
+    <div class="user-area">
+
+        <a href="login.html" class="login-button" id="login-button">
+            <i class="fa-solid fa-user"></i>
+            <span>Log in</span>
+        </a>
+
+        <div class="profile-menu" id="profile-menu">
+
+            <div class="profile-name" id="profile-name">
+                User
+            </div>
+
+            <div class="profile-email" id="profile-email">
+                user@email.com
+            </div>
+
+            <div class="profile-divider"></div>
+
+            <button id="logout-button">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Log out
+            </button>
+
+        </div>
+
+    </div>
+    
+    <div class="app">
+
+
+        <!-- ==================================================
+             SIDEBAR
+        =================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- =========================
+                 VYBE LOGO
+            ========================== -->
+
+            <div class="sidebar-logo">
+
+                <div class="logo-circle">
+                    <img src="image/vlogo.png" alt="VYBE Logo">
+                </div>
+
+                <span>VYBE</span>
+
+            </div>
+
+
+            <!-- =========================
+                 MAIN NAVIGATION
+            ========================== -->
+
+            <nav class="main-nav">
+
+
+                <!-- HOME -->
+
+                <a href="#" class="nav-item active">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Home</span>
+
+                </a>
+
+
+                <!-- SEARCH -->
+
+                <a href="#" class="nav-item">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <span>Search</span>
+
+                </a>
+
+
+                <!-- YOUR LIBRARY -->
+
+                <a href="#" class="nav-item" id="your-library-button">
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <span>Your Library</span>
+
+                </a>
+
+
+            </nav>
+
+
+
+            <!-- ==================================================
+                 PLAYLIST SECTION
+            =================================================== -->
+
+            <div class="playlist-section">
+
+
+                <div class="playlist-heading">
+
+                    YOUR LIBRARY
+
+                </div>
+
+                <!-- CREATE PLAYLIST -->
+
+                <a href="create-playlist.html" class="playlist-item library-child"  id="create-playlist-link">
+
+                    <div class="playlist-icon create">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </div>
+
+                    <span>Create Playlist</span>
+
+                </a>
+
+
+                <!-- LIKED SONGS -->
+
+                <a href="liked.html" class="playlist-item library-child" id="liked-songs-link">
+
+                    <div class="playlist-icon liked">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                    </div>
+
+                    <span>Liked Songs</span>
+
+                </a>
+
+            </div>
+
+            <!-- ==================================================
+                 USER PLAYLISTS
+            =================================================== -->
+
+            <div class="user-playlists" id="sidebar-playlists">
+
+                <div class="playlist-heading">
+
+                    YOUR PLAYLIST
+
+                </div>
+
+                <!-- JavaScript will add playlists here -->
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 SIDEBAR BOTTOM
+            =================================================== -->
+
+            <div class="sidebar-bottom">
+
+
+                <a href="#" class="nav-item settings-item">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- ==================================================
+             MAIN CONTENT AREA
+        =================================================== -->
+
+        <div class="content-area">
+
+
+            <!-- ==================================================
+                 MAIN CONTENT
+            =================================================== -->
+
+            <main class="main-content">
+
+
+                <!-- =========================
+                     WELCOME TITLE
+                ========================== -->
+
+                <h1>Welcome to VYBE</h1>
+
+                <!-- ==================================================
+                     SEARCH BAR
+                =================================================== -->
+
+                <div class="search-bar">
+
+
+                    <span class="search-icon">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </span>
+
+
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Find your sound. Feel your VYBE."
+                        autocomplete="off"
+                    >
+
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     TRENDING MUSIC SECTION
+                =================================================== -->
+
+                <section class="music-section" id="trending">
+
+                    <h2>Trending For Your VYBE</h2>
+
+                    <div class="album-wrapper">
+
+                        <!-- LEFT SCROLL BUTTON -->
+
+                        <button
+                            class="scroll-btn scroll-left"
+                            id="scroll-left"
+                            type="button"
+                            aria-label="Scroll songs left"
+                            title="Previous songs"
+                        >
+
+                            <i class="fa-solid fa-chevron-left"></i>
+
+                        </button>
+
+                        <!-- ==================================================
+                             SONG CARDS
+                             JavaScript creates cards here
+                        =================================================== -->
+
+                        <div
+                            class="album-container"
+                            id="album-container"
+                        ></div>
+
+                        <!-- RIGHT SCROLL BUTTON -->
+
+                        <button
+                            class="scroll-btn scroll-right"
+                            id="scroll-right"
+                            type="button"
+                            aria-label="Scroll songs right"
+                            title="More songs"
+                        >
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- ==================================================
+                     TOP ARTISTS SECTION
+                =================================================== -->
+
+                <section class="artists-section">
+
+                    <h2>Top Artists</h2>
+
+
+                    <div class="album-wrapper">
+
+                        <!-- LEFT SCROLL BUTTON -->
+
+                        <button
+                            class="scroll-btn scroll-left"
+                            id="artist-scroll-left"
+                            type="button"
+                            aria-label="Scroll artists left"
+                            title="Previous artists"
+                        >
+
+                            <i class="fa-solid fa-chevron-left"></i>
+
+                        </button>
+
+                        <!-- JavaScript creates artist cards here -->
+
+                        <div
+                            class="artists-container"
+                            id="artists-container"
+                        ></div>
+
+                        <button
+                            class="scroll-btn scroll-right"
+                            id="artist-scroll-right"
+                            type="button"
+                            aria-label="Scroll artists right"
+                            title="More artists"
+                        >
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+
+
+            <!-- ==================================================
+                 AUDIO ELEMENT
+            =================================================== -->
+
+            <audio
+                id="audio-player"
+                preload="metadata"
+            ></audio>
+
+
+
+            <!-- ==================================================
+                 BOTTOM MUSIC PLAYER
+            =================================================== -->
+
+            <div class="player">
+
+
+                <!-- ==================================================
+                     SONG INFORMATION
+                =================================================== -->
+
+                <div class="song-info">
+
+
+                    <!-- CURRENT SONG IMAGE -->
+
+                    <div id="song-image" class="song-image"></div>
+
+                    <!-- SONG TITLE + ARTIST -->
+
+                    <div class="song-details">
+                        <h4 id="song-title"> Choose a song </h4>
+                        <p id="song-artist"> VYBE Originals </p>
+                    </div>
+                    
+                    <!-- Add to Liked Songs -->
+                    <button id="like-button" class="like-button" title="Add to Liked Songs">
+                        <i class="fa-regular fa-plus"></i>
+                    </button>
+
+                </div>
+
+                <!-- ==================================================
+                     PLAYER CONTROLS
+                =================================================== -->
+
+                <div class="player-controls">
+
+
+                    <!-- =========================
+                         CONTROL BUTTONS
+                    ========================== -->
+
+                    <div class="control-buttons">
+
+
+                        <!-- SHUFFLE -->
+
+                        <button
+                            id="shuffle-button"
+                            class="secondary-control"
+                            type="button"
+                            aria-label="Shuffle"
+                            title="Shuffle"
+                        >
+
+                            <i class="fa-solid fa-shuffle"></i>
+
+                        </button>
+
+
+
+                        <!-- PREVIOUS -->
+
+                        <button
+                            id="prev-button"
+                            class="secondary-control"
+                            type="button"
+                            aria-label="Previous song"
+                            title="Previous song"
+                        >
+
+                            <i class="fa-solid fa-backward-step"></i>
+
+                        </button>
+
+
+
+                        <!-- PLAY / PAUSE -->
+
+                        <button
+                            id="play-button"
+                            class="play-button"
+                            type="button"
+                            aria-label="Play"
+                            title="Play"
+                        >
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </button>
+
+
+
+                        <!-- NEXT -->
+
+                        <button
+                            id="next-button"
+                            class="secondary-control"
+                            type="button"
+                            aria-label="Next song"
+                            title="Next song"
+                        >
+
+                            <i class="fa-solid fa-forward-step"></i>
+
+                        </button>
+
+
+
+                        <!-- REPEAT -->
+
+                        <button
+                            id="repeat-button"
+                            class="secondary-control"
+                            type="button"
+                            aria-label="Repeat"
+                            title="Repeat"
+                        >
+
+                            <i class="fa-solid fa-repeat"></i>
+
+                        </button>
+
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         PROGRESS BAR
+                    =================================================== -->
+
+                    <div class="progress-container">
+
+
+                        <!-- CURRENT TIME -->
+
+                        <span id="current-time">
+                            0:00
+                        </span>
+
+
+                        <!-- PROGRESS -->
+
+                        <input
+                            type="range"
+                            id="progress-bar"
+                            value="0"
+                            min="0"
+                            max="0"
+                            step="1"
+                            aria-label="Song progress"
+                        >
+
+
+                        <!-- TOTAL DURATION -->
+
+                        <span id="duration">
+                            0:00
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     VOLUME CONTROL
+                =================================================== -->
+
+                <div class="volume">
+
+
+                    <!-- VOLUME ICON -->
+
+                    <button
+                        id="volume-icon"
+                        type="button"
+                        aria-label="Mute or unmute"
+                        title="Mute / Unmute"
+                    >
+
+                        <i class="fa-solid fa-volume-high"></i>
+
+                    </button>
+
+
+
+                    <!-- VOLUME SLIDER -->
+
+                    <input
+                        type="range"
+                        id="volume-bar"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="1"
+                        aria-label="Volume"
+                    >
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script src="Script.js"></script>
+
+
+</body>
+
+</html>
